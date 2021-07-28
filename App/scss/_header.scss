@@ -1,0 +1,126 @@
+.header{
+    width:100vw; 
+    position : fixed;
+    // box-shadow:0 0px 10px #5DA3FA;
+
+
+    .white-curve{
+        position: absolute;
+        z-index: -1;
+        height: 85px;
+    }
+
+    &__logo{
+        .logo-img{
+            height: 55px;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 7px;
+        }
+    }
+    
+    &__menu{//mobile menu
+        margin-right: 20px;
+        >span{
+            display: block;
+            width: 2.2rem;
+            height: .3rem;
+            border-radius: 5px;
+            background-color: var(--white);
+            transform-origin: 6px;
+            transition: all 400ms ease-in-out;
+            
+            
+            &:not(:last-child){
+                margin-bottom: 3px;
+            }
+        }
+
+        &.open{
+                
+            > span:first-child{
+                background-color: var(--white);
+                transform: rotate(45deg);
+            }
+            
+            >span:nth-child(2){
+                opacity: 0;
+            }
+
+            >span:last-child{
+                border-radius: 8px;
+                background-color: var(--white);
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__links{
+        margin-right: 77px;
+        
+        a{
+            display: inline-block;
+            font-size: 0.875rem;
+            color: var(--white);
+            transition: .5s ease color;
+
+            &:not(:last-child){
+                margin-right: 4rem;
+            }
+
+            &::after{
+                content: '';
+                position: relative;
+                display: block;
+                height: .2rem;
+                bottom: -1.4rem;
+                border-radius: 30px;
+                opacity: 0;
+                transition: .6s ease;
+            }
+
+            &:hover::after{
+                animation: grow 500ms forwards;
+                background: #6367EC;
+                border-radius: 30px;
+            }
+
+            &:hover{
+                color: #5DA3FA;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .overlay{
+        z-index: -10;
+        opacity: 0;
+        display: block;
+        position: fixed;
+        top: 0px;
+        bottom:0px;
+        left: 0px;
+        right: 0px;
+        background-image: linear-gradient(#5DA3FA, transparent);
+    }
+
+    &__box-menu{
+        position:absolute;
+        background-color: var(--white);
+        width: 90vw;
+        height: 40vh;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: .375rem;
+
+        margin: 10% auto;        
+        a{
+            color: var(--main-blue);
+            padding: 0.625rem;
+            display:block;
+            text-align: center;
+        }
+
+    }
+}
+
