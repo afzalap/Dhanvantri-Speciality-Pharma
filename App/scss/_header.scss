@@ -1,6 +1,7 @@
 .header{
     width:100vw; 
     position : fixed;
+    z-index : 1000;
     // box-shadow:0 0px 10px #5DA3FA;
 
 
@@ -121,6 +122,20 @@
             text-align: center;
         }
 
+    }
+
+    //visibility
+    .hide-for-mobile {
+        //hide for tablet and mobile
+        @include breakpoint-down(medium) {
+            display: none;
+        }
+    }   
+
+    .hide-for-desktop {
+        @include breakpoint-up(large) {
+            display: none;
+        }
     }
 }
 

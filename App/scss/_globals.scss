@@ -90,16 +90,4 @@ $breakpoints-down: (
      }
 }
 
-//visibility
-.hide-for-mobile {
-     //hide for tablet and mobile
-     @include breakpoint-down(medium) {
-          display: none;
-     }
-}
 
-.hide-for-desktop {
-     @include breakpoint-up(large) {
-          display: none;
-     }
-}
