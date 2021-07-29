@@ -1,4 +1,194 @@
 .about {
-     height: 100vh;
-     width: 100vw;
+     display: grid;
+     padding: 10% 0;
+
+     @include breakpoint-up(large){
+          padding: 5% 2%;
+          grid-template-columns: 3fr 4.3fr 1.68fr;
+          grid-template-rows: auto auto auto;
+     
+          grid-template-areas: 
+          " feature-box learn-text learn-text"
+          " feature-box text text"
+          " feature-box feature-text iso-img";
+     }
+     
+
+     &__learn-text{
+          
+          font-weight: var(--medium);
+          color: var(--text--light-blue);
+          text-align: center;
+
+          @include breakpoint-up(large){
+               grid-area: learn-text;
+               text-align: left;
+               h3{
+                    margin: 0;
+               }
+          }
+     }
+
+     &__feature-box{
+          font-weight: var(--regular);
+          color: var(--white);
+          background: transparent linear-gradient(180deg, var(--main-blue) 0%, var(--gradient-end) 100%) 0% 0% no-repeat padding-box;
+          text-align: center;
+          border-radius: 20px;
+
+          h1{
+
+               @include breakpoint-up(medium){
+                    font-size: 5rem;
+               }
+               font-weight: var(--regular);
+               font-size: 3.6rem;
+               margin: 0;
+          }
+
+          p{
+               @include breakpoint-up(medium){
+                    font-size: 1.2rem;
+               }
+               margin: 0;
+          }
+
+          
+          @include  breakpoint-down(medium){
+               width: 70vw;
+               height: 22rem;
+               margin: 0 auto;
+          }
+
+
+          @include breakpoint-up(large){
+               grid-area: feature-box;
+               width: 85%;
+               // margin: 0 auto;
+          }
+
+
+          .features{
+               align-items: flex-start;
+
+               div{
+                    &:not(:last-child){
+                         margin-bottom: 15px;
+                    }
+               }
+
+               img{
+                    display: inline-block;
+                    height: 18px;
+                    transform: translateY(3px);
+
+                    @include breakpoint-up(medium){
+                         height: 20px;
+                    }
+               }
+
+               .tick-text{
+                    padding-left: 10px;
+                    display: inline-block;
+                    font-weight: var(--regular);
+
+                    @include breakpoint-up(medium){
+                         font-size: 1.3rem;
+                    }
+               }
+          }
+     }
+
+     &__iso-img{
+          padding: 15% 0;
+          img{
+               height: 10rem;
+          }
+
+          @include breakpoint-up(medium){
+               padding: 8% 0;
+          }
+          @include breakpoint-up(large){
+               grid-area: iso-img;
+               // border-left: 1px solid grey;
+          }
+     }
+
+     &__text{
+
+          h1{
+               color: var(--main-blue);
+               font-weight: var(--semi-bold);
+               text-align: center;
+
+               @include breakpoint-up(medium){
+                    font-size: 2.8rem;
+                    font-weight: var(--semi-bold);
+                    margin: 0;
+               }
+
+               @include breakpoint-up(large){
+                    font-size: 2.8rem;
+                    text-align: left;
+                    font-weight: var(--semi-bold);
+                    margin: 0;
+               }
+          }
+          p{
+               line-height: 1.5;
+               padding: 0 21px;
+               font-size: .83rem;
+               color: var(--black);
+
+               
+               @include breakpoint-up(medium){
+                    font-size: .95rem;
+                    margin-top: 2.5%;
+                    padding: 3% 10%;
+               }
+
+               @include breakpoint-up(large){
+                    font-size: .95rem;
+                    margin-top: 2.5%;
+                    padding: 0;
+               }
+               
+          }
+
+          @include breakpoint-up(large){
+               grid-area: text;
+          }
+
+     }
+
+     &__feature-text{
+
+          .grid{
+               display: grid;
+               grid-template-columns: 60px auto;
+          }
+
+
+          img{
+               align-self: center;
+               justify-self: center;
+               height: 1.8rem;
+          }
+
+          p{
+               color: var(--black);
+               display: inline-block;
+          }
+
+          @include breakpoint-up(medium){
+               margin: 0 auto;
+          }
+
+          @include breakpoint-up(large){
+               grid-area: feature-text;
+               margin-top: 3%;
+          }
+     }
+
+
 }
