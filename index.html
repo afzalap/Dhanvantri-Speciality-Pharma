@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-     <head>
-          <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-               name="viewport"
-               content="width=device-width, initial-scale=1.0"
-          />
 
-          <link rel="stylesheet" href="./dist/style.css" />
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" defer></script>
-          <script src="./App/js/script.js" defer></script>
-          <!-- google fonts -->
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-               href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-               rel="stylesheet"
-          />
+<head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <title>Dhanvantri Speciality Pharma</title>
-          <link rel="icon" href="./assets/logo.png" type="image" />
-     </head>
-     <body>
-          <!-- header -->
-          <header class="header">
-               <div class="overlay has-fade"></div>
-               <img
-                    src="./assets/whiteCurve.png"
-                    alt="whiteCurve"
-                    class="white-curve"
-               />
-               <nav class="nav-bar flex flex-jc-sb flex-ai-c">
-                    <a href="/" class="header__logo">
-                         <img
-                              src="./assets/logo.png"
-                              alt="Dhanvantri Speciality Pharma"
-                              class="logo-img"
-                         />
-                    </a>
+     <link rel="stylesheet" href="./dist/style.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" defer></script>
+     <script src="./App/js/script.js" defer></script>
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet" />
 
-                    <a  id="btnhmb" class="header__menu hide-for-desktop">
-                         <span></span>
-                         <span></span>
-                         <span></span>
-                    </a>
+     <title>Dhanvantri Speciality Pharma</title>
+     <link rel="icon" href="./assets/logo.png" type="image" />
+</head>
 
-                    <div class="header__links hide-for-mobile">
-                         <a href="#hero">Home</a>
-                         <a href="#about">About Us</a>
-                         <a href="#awards">Awards</a>
-                         <a href="#contact">Contact Us</a>
-                    </div>
-               </nav>
-               <div class="header__box-menu flex flex-jc-sa flex-fd-col hide-for-desktop has-fade">
+<body>
+     <!-- header -->
+     <header class="header">
+          <div class="overlay has-fade"></div>
+          <img src="./assets/whiteCurve.png" alt="whiteCurve" class="white-curve" />
+          <nav class="nav-bar flex flex-jc-sb flex-ai-c">
+               <a href="/" class="header__logo">
+                    <img src="./assets/logo.png" alt="Dhanvantri Speciality Pharma" class="logo-img" />
+               </a>
+
+               <a id="btnhmb" class="header__menu hide-for-desktop">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+               </a>
+
+               <div class="header__links hide-for-mobile">
                     <a href="#hero">Home</a>
                     <a href="#about">About Us</a>
                     <a href="#awards">Awards</a>
                     <a href="#contact">Contact Us</a>
                </div>
-          </header>
-          <!-- header end -->
-  
-          <!-- hero section -->
-          <section class="hero flex flex-fd-col flex-jc-sa" id="hero">
-               <div class="hero__img">
-                    <img src="./assets/pharma.png" alt="pharma img">
-               </div>
-               <div class="hero__text">
-                    <h1>
-                         A pharmacy that believes in making families
-                    </h1>
-                    <p>
-                         Your trusted wholesale and retail pharmaceutical distributor
-                    </p>
-                    <a href="#contact" class="contact-us-btn">Contact Us</a>
-               </div>
-          </section>
-          <!-- hero section end -->
+          </nav>
+          <div class="header__box-menu flex flex-jc-sa flex-fd-col hide-for-desktop has-fade">
+               <a href="#hero">Home</a>
+               <a href="#about">About Us</a>
+               <a href="#awards">Awards</a>
+               <a href="#contact">Contact Us</a>
+          </div>
+     </header>
+     <!-- header end -->
 
-          <!-- about section -->
-          <section class="about" id="about"></section>
-          <!-- about section end -->
-          
-     </body>
+     <!-- hero section -->
+     <section class="hero flex flex-fd-col flex-jc-sa" id="hero">
+          <div class="hero__img">
+               <img src="./assets/pharma.png" alt="pharma img">
+          </div>
+          <div class="hero__text">
+               <h1>
+                    A pharmacy that believes in making families
+               </h1>
+               <p>
+                    Your trusted wholesale and retail pharmaceutical distributor
+               </p>
+               <a href="#contact" class="contact-us-btn">Contact Us</a>
+          </div>
+     </section>
+     <!-- hero section end -->
+
+     <!-- about section -->
+     <section class="about" id="about">
+          <div class="about__learn-text">
+               <h3>LEARN ABOUT US</h3>
+          </div>
+          <div class="about__feature-box flex flex-ai-c flex-jc-sa flex-fd-col">
+               <div>
+                    <h1>15+</h1>
+                    <p>Years Experience</p>
+               </div>
+               <div class="features flex flex-fd-col flex-jc-c">
+                    <div>
+                         <img src="./assets/boxtick.svg" alt="tick" class="tick">
+                         <h3 class="tick-text">20+ Awards</h3>
+                    </div>
+                    <div>
+                         <img src="./assets/boxtick.svg" alt="tick" class="tick">
+                         <h3 class="tick-text">5K+ Customers</h3>
+                    </div>
+                    <div>
+                         <img src="./assets/boxtick.svg" alt="tick" class="tick">
+                         <h3 class="tick-text">70+ Suppliers</h3>
+                    </div>
+               </div>
+          </div>
+          <div class="about__iso-img flex flex-ai-c flex-jc-c">
+               <img src="./assets/isoCertified.svg" alt="iso-certified">
+          </div>
+          <div class="about__text">
+               <h1>Your Go-To Pharmacy</h1>
+               <p>When it comes to finding the medications you need, our Pharmacy has got you covered. Our responsible
+                    staff works hard to make sure each patient is taken care of with fast and friendly service. Come to
+                    DHANVANTHRI PHARMA and start getting the personalized attention you deserve.</p>
+          </div>
+          <div class="about__feature-text">
+               <div class="grid">
+                    <img src="./assets/coldStorage.svg" alt="coldStorage">
+                    <p class="text1">Temperature Controlled Storage</p>
+               </div>
+               <div class="grid">
+                    <img src="./assets/rupee.svg" alt="rupee">
+                    <p class="text2">Competitive Prices</p>
+               </div>
+               <div class="grid">
+                    <img src="./assets/antiCancer.svg" alt="antiCancer">
+                    <p>Distributors & Stockiest of Anti-Cancer, Nephrology and Life Saving Medicines</p>
+               </div>
+          </div>
+     </section>
+     <!-- about section end -->
+
+</body>
+
 </html>
