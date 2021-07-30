@@ -201,13 +201,13 @@
      }
      
      .sup-img{
-          background: url(../../assets/Supplierslist-mobile-4.png);
+          background: url(../assets/Supplierslist-mobile-4.png);
           height: 18.75rem;
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
                @include breakpoint-up(medium){
-                    background: url(../../assets/Suppliers-list2.png);
+                    background: url(../assets/Suppliers-list2.png);
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;

@@ -509,8 +509,8 @@ a:active {
     padding: 5% 2%;
     -ms-grid-columns: 3fr 4.3fr 1.68fr;
         grid-template-columns: 3fr 4.3fr 1.68fr;
-    -ms-grid-rows: auto auto auto auto;
-        grid-template-rows: auto auto auto auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas: " feature-box learn-text learn-text" " feature-box text text" " feature-box feature-text iso-img";
   }
 }
@@ -731,7 +731,7 @@ a:active {
 }
 
 .our-suppliers .sup-img {
-  background: url(../../assets/Supplierslist-mobile-4.png);
+  background: url(../assets/Supplierslist-mobile-4.png);
   height: 18.75rem;
   background-size: contain;
   background-position: center;
@@ -740,7 +740,7 @@ a:active {
 
 @media (min-width: 40em) {
   .our-suppliers .sup-img {
-    background: url(../../assets/Suppliers-list2.png);
+    background: url(../assets/Suppliers-list2.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
