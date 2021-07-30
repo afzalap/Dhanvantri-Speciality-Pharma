@@ -395,7 +395,7 @@ a:active {
 }
 
 .hero__text {
-  padding: 0 10px;
+  padding: 0 .625rem;
   margin: 0 auto;
 }
 
@@ -509,8 +509,8 @@ a:active {
     padding: 5% 2%;
     -ms-grid-columns: 3fr 4.3fr 1.68fr;
         grid-template-columns: 3fr 4.3fr 1.68fr;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
+    -ms-grid-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas: " feature-box learn-text learn-text" " feature-box text text" " feature-box feature-text iso-img";
   }
 }
@@ -584,24 +584,24 @@ a:active {
 }
 
 .about__feature-box .features div:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .about__feature-box .features img {
   display: inline-block;
-  height: 18px;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  height: 1.125rem;
+  -webkit-transform: translateY(0.1875rem);
+          transform: translateY(0.1875rem);
 }
 
 @media (min-width: 40em) {
   .about__feature-box .features img {
-    height: 20px;
+    height: 1.25rem;
   }
 }
 
 .about__feature-box .features .tick-text {
-  padding-left: 10px;
+  padding-left: 0.625rem;
   display: inline-block;
   font-weight: var(--regular);
 }
@@ -657,7 +657,7 @@ a:active {
 
 .about__text p {
   line-height: 1.5;
-  padding: 0 21px;
+  padding: 0 1.3125rem;
   font-size: .83rem;
   color: var(--black);
 }
@@ -687,8 +687,8 @@ a:active {
 .about__feature-text .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60px auto;
-      grid-template-columns: 60px auto;
+  -ms-grid-columns: 3.75rem auto;
+      grid-template-columns: 3.75rem auto;
 }
 
 .about__feature-text img {
@@ -716,5 +716,61 @@ a:active {
     grid-area: feature-text;
     margin-top: 3%;
   }
+}
+
+.our-suppliers {
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(var(--main-blue)), to(var(--gradient-end))) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, var(--main-blue) 0%, var(--gradient-end) 100%) 0% 0% no-repeat padding-box;
+  margin-top: 5%;
+  padding: 7% 0;
+}
+
+.our-suppliers h1 {
+  font-weight: var(--bold);
+  text-align: center;
+}
+
+.our-suppliers .sup-img {
+  background: url(../../assets/Supplierslist-mobile-4.png);
+  height: 18.75rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 40em) {
+  .our-suppliers .sup-img {
+    background: url(../../assets/Suppliers-list2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 71.875em) {
+  .our-suppliers .sup-img {
+    margin: 0 auto;
+    height: 28.125rem;
+  }
+}
+
+.our-suppliers p {
+  padding: 0;
+  margin-top: .625rem;
+  margin-right: 9%;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+@media (min-width: 71.875em) {
+  .our-suppliers {
+    margin-top: 2%;
+    padding: 2% 0;
+  }
+}
+
+.awards {
+  height: 100vh;
+  width: 100vw;
 }
 /*# sourceMappingURL=style.css.map */

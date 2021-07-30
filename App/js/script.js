@@ -35,10 +35,10 @@ gsap.registerPlugin(ScrollTrigger);
 const headerTimeline = gsap.timeline({
     defaults: {duration: 0.4},
     scrollTrigger: {
-        trigger: ".header",
+        trigger: ".hero",
         start: "top",
-        //   markers: true,
-        toggleActions: "restart none reverse reset",
+        // markers: true,
+        toggleActions: "restart none none reset",
     },
 });
 headerTimeline.to(".header", {
