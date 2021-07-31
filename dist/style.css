@@ -769,8 +769,107 @@ a:active {
   }
 }
 
+.is-hidden {
+  display: none;
+}
+
 .awards {
-  height: 100vh;
-  width: 100vw;
+  margin: 5% 0;
+}
+
+.awards h1 {
+  color: var(--main-blue);
+  text-align: center;
+}
+
+.awards .carousel {
+  position: relative;
+  height: 12.325rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+@media (min-width: 40em) {
+  .awards .carousel {
+    height: 20rem;
+  }
+}
+
+.awards .carousel__button {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.awards .carousel__button--left img {
+  height: 1.25rem;
+}
+
+.awards .carousel__button--right {
+  left: 91%;
+}
+
+.awards .carousel__button--right img {
+  height: 1.25rem;
+}
+
+.awards .carousel__track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.awards .carousel__track-container .carousel__track {
+  position: relative;
+  height: 100%;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.awards .carousel__track-container .carousel__track .carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.awards .carousel__track-container .carousel__track .carousel__slide .carousel__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.awards .carousel .carousel__nav {
+  padding: 7% 0;
+}
+
+.awards .carousel .carousel__nav .carousel__indicator {
+  padding: 5px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  height: .3rem;
+  width: .3rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.awards .carousel .carousel__nav .carousel__indicator:not(:last-child) {
+  margin-right: 8px;
+}
+
+.awards .carousel .carousel__nav .current-slide {
+  background: rgba(0, 0, 0, 0.75);
 }
 /*# sourceMappingURL=style.css.map */
