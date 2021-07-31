@@ -67,6 +67,9 @@ const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
+prevButton.classList.remove('is-hidden');
+var pIndex=0;
+
 // slides[0].style.left = slideWidth * 0 + "px";
 // slides[1].style.left = slideWidth * 1 + "px";
 // slides[2].style.left = slideWidth * 2 + "px";
@@ -88,44 +91,47 @@ const updateDots = (currentDot, targetDot) => {
     targetDot.classList.add('current-slide');
 }
 
-const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-    if (targetIndex == 0) {
-        prevButton.classList.add('is-hidden');
-        nextButton.classList.remove('is-hidden');
-    } else if (targetIndex == slides.length - 1) {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.add('is-hidden');
-    } else{
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.remove('is-hidden');
-    }
-}
-
 prevButton.addEventListener("click", e => {
-    const currentSlide = track.querySelector('.current-slide');
-    const prevSlide = currentSlide.previousElementSibling;
-    const currentDot = dotsNav.querySelector(".current-slide");
-    const prevDot = currentDot.previousElementSibling;
-    const prevIndex = slides.findIndex(slide => slide === prevSlide);
-
+    if(pIndex == 0){
+        for(let i=0;i<4;i++){
+            nextButton.click();
+        } 
+    }
+    else{
+        const currentSlide = track.querySelector('.current-slide');
+        const prevSlide = currentSlide.previousElementSibling;
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const prevDot = currentDot.previousElementSibling;
+        const prevIndex = slides.findIndex(slide => slide === prevSlide);
+        
+        pIndex=prevIndex;
+        moveToSlide(track, currentSlide, prevSlide);
+        updateDots(currentDot, prevDot); 
+    }
     
-    moveToSlide(track, currentSlide, prevSlide);
-    updateDots(currentDot, prevDot);
-    hideShowArrows(slides, prevButton, nextButton, prevIndex);
 
 })
 
 nextButton.addEventListener("click", e => {
-    const currentSlide = track.querySelector('.current-slide');
-    const nextSlide = currentSlide.nextElementSibling;
-    const currentDot = dotsNav.querySelector(".current-slide");
-    const nextDot = currentDot.nextElementSibling;
-    const nextIndex = slides.findIndex(slide => slide === nextSlide);
     
-    moveToSlide(track, currentSlide, nextSlide);
-    updateDots(currentDot, nextDot);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
-
+    if(pIndex+1 == slides.length){
+        for(let i=0;i<4;i++){
+            prevButton.click();
+        } 
+    }
+    else{
+        
+        const currentSlide = track.querySelector('.current-slide');
+        const nextSlide = currentSlide.nextElementSibling;
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const nextDot = currentDot.nextElementSibling;
+        const nextIndex = slides.findIndex(slide => slide === nextSlide);
+        
+        pIndex=nextIndex;
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+    }
+    
 })
 
 dotsNav.addEventListener("click", e => {
@@ -144,3 +150,9 @@ dotsNav.addEventListener("click", e => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
 })
+
+function slideShow() {
+    nextButton.click();
+}
+setInterval(slideShow,3000);
+
