@@ -1,0 +1,165 @@
+.contact{
+    
+    margin-top: 5rem;
+    background: transparent linear-gradient(180deg, var(--main-blue) 0%, var(--gradient-end) 100%) 0% 0% no-repeat padding-box;
+    text-align: center;
+    padding: 5% 1.2rem 0 1.2rem;
+
+    @include breakpoint-up(large){
+        margin-top: 10rem;
+    }
+
+
+    .get{
+        font-weight: var(--medium);
+        font-size: 1.6rem;
+
+        @include breakpoint-up(large){
+            font-size: 2.5rem;
+        }
+    }
+
+    .better{
+        font-weight: var(--light);
+        margin-top: 2.2rem;
+
+        p{
+            margin: 0;
+
+            &:nth-child(1){
+                font-size: 1.2rem;
+                @include breakpoint-up(large){
+                    font-size: 1.6rem;
+                }
+            }
+
+            &:nth-child(2){
+                margin-top: .2rem;
+                font-size: .9rem;
+                @include breakpoint-up(large){
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .name{
+        margin-top: 2.2rem;
+        h1{
+            font-weight: var(--medium);
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            @include breakpoint-up(large){
+                font-size: 2rem;
+            }
+        }
+
+        p{
+            font-size: .75rem;
+            opacity: 0.75;
+            @include breakpoint-up(large){
+                font-size: 1.1rem;
+            }
+        }
+
+    }
+
+    .hours{
+        margin-top: 2.2rem;
+
+        p{
+            margin: .3rem;
+
+            @include breakpoint-up(large){
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .emergency{
+        margin-top: 2.8rem;
+        font-weight: var(--medium);
+    }
+
+    .cont-map{
+        @include breakpoint-up(medium){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 2rem;
+
+        }
+        .cont{
+            width: fit-content;
+            margin: 0 auto;
+
+            @include breakpoint-up(medium){
+                margin: 0;
+            }
+            div{
+                
+                display: grid;
+                grid-template-columns: 1.3rem auto;
+    
+                img{
+                    align-self: center;
+                    justify-self: center;
+                    height: 1.7rem;
+                    width: 1.3rem;
+                    @include breakpoint-up(large){
+                        height: 2rem;
+                        width: 1.7rem;
+                    }
+                }
+    
+                a{
+                    text-align: left;
+                    color: var(--white);
+                    cursor: pointer;
+                }
+                p{
+                    text-align: left;
+                    padding-left: 1.5rem;
+                    @include breakpoint-up(large){
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+    
+        }
+    
+        .map{
+            @include breakpoint-down(small){
+                margin-top: 2.2rem;
+            }
+            @include breakpoint-up(medium){
+                margin-left: 2rem;
+            }
+            @include breakpoint-up(large){
+                margin-left: 2.9rem;
+            }
+            iframe{
+                height:20rem ;
+                border-radius: 7px;
+
+                @include breakpoint-up(medium){
+                    height: 13.125rem;
+                    width: 18em;
+                }
+                @include breakpoint-up(large){
+                    height: 16rem;
+                    width: 28em;
+                }
+            }
+        }
+    }
+
+    .copy{
+        margin-top: 2.2rem;
+        margin-bottom: 0;
+        padding-bottom: .8rem;
+        font-size: .75rem;
+        opacity: .75;
+    }
+}
