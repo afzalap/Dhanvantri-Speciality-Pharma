@@ -55,6 +55,134 @@ headerTimeline.to(".header", {
         color: "#383CC1"
     }, 0);
 
+// const heroTimeline = gsap.timeline({
+//     defaults: {duration: 0.4},
+//     scrollTrigger: {
+//         trigger: ".hero",
+//         start: "top",
+//         // markers: true,
+//         toggleActions: "restart none none reset",
+//     },
+// });
+
+const aboutTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "bottom 80%",
+        // markers: true,
+        ease: Power1.easeInOut,
+        // toggleActions: "play none none reset",
+    },
+});
+aboutTimeline.from(".about", {
+    duration: 1.3,
+    xPercent: "-100",
+    opacity: 0,
+});
+
+const supplierTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".about",
+        start: "bottom 60%",
+        // markers: true,
+        ease: Power1.easeInOut,
+        // toggleActions: "play none none reset",
+    },
+});
+supplierTimeline.from(".sup", {
+    duration: 1.3,
+    xPercent: "100",
+    opacity: 0,
+});
+
+const awardsTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".awards",
+        start: "top 90%",
+        // markers: true,
+        ease: Power1.easeInOut,
+        // toggleActions: "play none none reset",
+    },
+});
+awardsTimeline.from(".awards", {
+    duration: 1.3,
+    xPercent: "100",
+    opacity: 0,
+});
+
+
+const contactTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".awards",
+        start: "bottom 90%",
+        // markers: true,
+        ease: Power1.easeInOut,
+        // toggleActions: "play none none reset",
+    },
+});
+contactTimeline.from(".contact", {
+    duration: 1.3,
+    yPercent: "100",
+    opacity: 0,
+});
+
+
+
+
+
+
+const countExp = document.querySelector('.exp');
+const countCustomers = document.querySelector('.customers');
+const countSupplers = document.querySelector('.supplers');
+const countAwards = document.querySelector('.award');
+
+
+ScrollTrigger.create({
+    trigger: ".about__feature-box",
+    start: "top 90%",
+    delay: 5,
+        // markers: true,
+    onEnter: () => {
+        let countE = 0;
+        let countC = 0;
+        let countS = 0;
+        let countA = 0;
+
+
+        setInterval(() => {
+            if (countE < 15) {
+                countE++;
+                countExp.innerHTML = countE + "+";
+            }
+        }, 100);
+
+        setInterval(() => {
+            if (countC < 5000) {
+                countC += 20;
+                countCustomers.innerHTML = countC + "+ Customers";
+            }
+        }, 6);
+
+        setInterval(() => {
+            if (countS < 70) {
+                countS ++;
+                countSupplers.innerHTML = countS + "+ Suppliers";
+            }
+        }, 18);
+
+        setInterval(() => {
+            if (countA < 20) {
+                countA ++;
+                countAwards.innerHTML = countA + "+ Awards" ;
+            }
+        }, 70);
+    },
+    toggleActions: "restart none none reset",
+});
+
+
+
+
 
     const track = document.querySelector(".carousel__track");
     const slides = Array.from(track.children);
@@ -148,4 +276,18 @@ headerTimeline.to(".header", {
     function slideShow() {
         nextButton.click();
     }
-    setInterval(slideShow,4000);
+setInterval(slideShow, 4000);
+    
+
+
+
+var dayOfWeek = (new Date).getDay();
+var hours = ["Closed",          // Sunday
+             "Open today 10:00 am – 07:00 pm",   // Monday
+             "Open today 10:00 am – 07:00 pm",   // Tuesday
+             "Open today 10:00 am – 07:00 pm",   // Wednesday
+             "Open today 10:00 am – 07:00 pm",   // Thursday
+             "Open today 10:00 am – 07:00 pm",   // Friday
+             "Open today 10:00 am – 07:00 pm"];  // Saturday
+var todaysHours = hours[dayOfWeek];
+document.getElementById("hours").innerHTML = todaysHours;
