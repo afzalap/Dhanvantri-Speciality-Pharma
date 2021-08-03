@@ -76,7 +76,7 @@ const aboutTimeline = gsap.timeline({
 });
 aboutTimeline.from(".about", {
     duration: 1.3,
-    xPercent: "-100",
+    // xPercent: "-100",
     opacity: 0,
 });
 
@@ -91,7 +91,7 @@ const supplierTimeline = gsap.timeline({
 });
 supplierTimeline.from(".sup", {
     duration: 1.3,
-    xPercent: "100",
+    // xPercent: "100",
     opacity: 0,
 });
 
@@ -106,7 +106,7 @@ const awardsTimeline = gsap.timeline({
 });
 awardsTimeline.from(".awards", {
     duration: 1.3,
-    xPercent: "100",
+    // xPercent: "100",
     opacity: 0,
 });
 
@@ -122,7 +122,7 @@ const contactTimeline = gsap.timeline({
 });
 contactTimeline.from(".contact", {
     duration: 1.3,
-    yPercent: "100",
+    // yPercent: "100",
     opacity: 0,
 });
 
