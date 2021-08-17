@@ -1,34 +1,39 @@
 
 
 const btnHamburger = document.querySelector('#btnhmb');
+let btnHamburgerLinks = document.querySelectorAll('.btn-hmb-links');
 const body = document.querySelector('body');
 const overlay = document.querySelector('.overlay');
 const fadeElems = document.querySelectorAll('.has-fade');
 
-btnHamburger.addEventListener('click', () => {
 
-  if(btnHamburger.classList.contains('open')){ // Close Hamburger Menu
-    body.classList.remove('noscroll');
-    btnHamburger.classList.remove('open');    
-    fadeElems.forEach(function(element){
-    element.classList.remove('fade-in');
-    element.classList.add('fade-out');
-    });
+const openClose = () => {
+    if(btnHamburger.classList.contains('open')){ // Close Hamburger Menu
+        body.classList.remove('noscroll');
+        btnHamburger.classList.remove('open');    
+        fadeElems.forEach(function(element){
+        element.classList.remove('fade-in');
+        element.classList.add('fade-out');
+        });
+        
+    }
+      else { // Open Hamburger Menu
+        body.classList.add('noscroll');
+        btnHamburger.classList.add('open');
+        fadeElems.forEach(function(element){
+        element.classList.remove('fade-out');
+        element.classList.add('fade-in');
+        });
     
+        }
+        
 }
-  else { // Open Hamburger Menu
-    body.classList.add('noscroll');
-    btnHamburger.classList.add('open');
-    fadeElems.forEach(function(element){
-    element.classList.remove('fade-out');
-    element.classList.add('fade-in');
-    });
 
-}  
-});
+btnHamburger.addEventListener('click', openClose);
 
-
-
+for (i of btnHamburgerLinks) {
+    i.addEventListener('click', openClose);
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
